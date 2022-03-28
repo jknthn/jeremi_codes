@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+<body>
+<div class="grid place-content-center px-4">
+    <div>
+        {{- partial "header.html" . -}}
+        <main>
+            <article class="prose lg:prose-l">
+                {{- block "main" . }}{{- end }}
+            </article>
+        </main>
+        {{- partial "footer.html" . -}}
+    </div>
+</div>
+</body>
+</html>

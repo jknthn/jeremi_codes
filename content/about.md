@@ -7,3 +7,8 @@ draft: false
 Hi 👋
 
 My name is Jeremi and I am a Software Engineer. I am enthusiastic about solving problems with tech and by our tradecraft in general.
+
+```python
+def method():
+    return None
+```

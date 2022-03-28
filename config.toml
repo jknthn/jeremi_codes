@@ -1,3 +1,9 @@
 baseURL = 'https://jeremi.codes'
 languageCode = 'en-us'
 title = 'jeremi.codes'
+theme = 'jc'
+
+[markup]
+[markup.highlight]
+style = 'nord'
+tabWidth = 4
