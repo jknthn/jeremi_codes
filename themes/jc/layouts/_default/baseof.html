@@ -2,16 +2,20 @@
 <html>
 {{- partial "head.html" . -}}
 <body>
-<div class="grid place-content-center px-4">
-    <div>
+<div class="min-h-screen bg-gray-50 flex flex-col justify-top relative overflow-hidden">
+    <div class="relative w-full px-6 pb-20 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl">
         {{- partial "header.html" . -}}
         <main>
-            <article class="prose lg:prose-l">
+            <div>
                 {{- block "main" . }}{{- end }}
-            </article>
+            </div>
         </main>
-        {{- partial "footer.html" . -}}
     </div>
+    {{- partial "footer.html" . -}}
 </div>
 </body>
 </html>
+
+
+
+
