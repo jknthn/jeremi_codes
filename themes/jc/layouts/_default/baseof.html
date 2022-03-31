@@ -7,7 +7,11 @@
         {{- partial "header.html" . -}}
         <main>
             <div>
-                {{- block "main" . }}{{- end }}
+                {{- block "page-head" . }}{{- end }}
+                <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
+                    {{- block "article" . }}{{- end }}
+                </div>
+                {{- block "page-foot" . }}{{- end }}
             </div>
         </main>
     </div>

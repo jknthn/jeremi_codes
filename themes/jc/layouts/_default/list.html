@@ -1,10 +1,12 @@
-{{ define "main" }}
-
+{{ define "article" }}
 <h2>{{ .Title }}</h2>
+{{ .Content }}
+{{ end }}
+
+{{ define "page-foot" }}
 <ul>
     {{ range .Pages }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>
-
 {{ end }}
