@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'jeremi.codes'
 theme = 'jc'
 
+[params]
+author = "Jeremi Kaczmarczyk"
+description = "Software engineering blog"
+title = 'jeremi.codes'
+
 [markup]
 [markup.highlight]
 style = 'nord'

@@ -1,0 +1,34 @@
+{
+  "accounts": [
+    {
+      "name": "Twitter",
+      "base_url": "https://twitter.com/",
+      "profile_suffix": "jeremi_codes",
+      "icon": "fa-brands fa-twitter"
+    },
+    {
+      "name": "LinkedIn",
+      "base_url": "https://www.linkedin.com/",
+      "profile_suffix": "in/jknthn/",
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "name": "GitHub",
+      "base_url": "https://github.com/",
+      "profile_suffix": "jknthn",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "name": "Instagram",
+      "base_url": "https://instagram.com/",
+      "profile_suffix": "jer.emi?r=nametag",
+      "icon": "fa-brands fa-instagram"
+    },
+    {
+      "name": "Email",
+      "base_url": "mailto:",
+      "profile_suffix": "jeremi.kaczmarczyk@gmail.com",
+      "icon": "fa-solid fa-at"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{{ range .Site.Data.socialmedia.accounts }}
+<button class="content-center w-10 h-10 hover:text-blue-700">
+    <a href="{{.base_url}}{{.profile_suffix}}" target="_blank" rel="noopener noreferrer"><i class="{{.icon}} fa-xl"></i></a>
+</button>
+{{ end }}
