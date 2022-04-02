@@ -35,6 +35,22 @@
     {
       "name": "Reddit",
       "url": "https://reddit.com/submit?url={url}&title={title}"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/intent/tweet?url={url}&via={via}"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/shareArticle?mini=true&url={url}&title={title}&summary={summary}"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/sharer.php?href={url}&display=popup"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/submitlink?u={url}&t={title}"
     }
   ]
 }
