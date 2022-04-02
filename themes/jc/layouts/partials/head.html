@@ -1,21 +1,35 @@
 <head>
+    {{ $title := (print .Title " - " .Site.Params.title) }}
+    {{- if.Page.IsHome -}}
+    {{ $title = .Site.Params.title }}
+    {{- end -}}
+
+    {{ $description := .Site.Params.description -}}
+    {{- with .Page.Description -}}
+        {{ $description = . }}
+    {{- end -}}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{.Site.Params.author}}">
-    <meta name="description" content="
-        {{- with .Page.Description -}}
-            {{ . }}
-        {{- else -}}
-            {{ .Site.Params.description -}}
-        {{- end -}}
-    ">
-    <title>
-        {{- if.Page.IsHome -}}
-            {{ .Site.Params.title }}
-        {{- else -}}
-            {{ .Title }} - {{ .Site.Params.title }}
-        {{- end -}}
-    </title>
+    <meta name="description" content="{{- $description -}}">
+    <title>{{ $title }}</title>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ .Site.BaseURL }}{{ .Permalink | absURL }}">
+    <meta name="twitter:creator" content="@jeremi_codes">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}static/img/social_cover.png">
+    <meta name="twitter:image:alt" content="Social cover banner">
+
+    <meta property="og:url" content="{{ .Site.BaseURL }}{{ .Permalink | absURL }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ $title }}"/>
+    <meta property="og:description" content="{{ $description }}"/>
+    <meta property="og:image" content="{{ .Site.BaseURL }}static/img/social_cover.png"/>
+    <meta property="og:image:alt" content="Social cover banner"/>
+
     <link rel="stylesheet" href="{{ "css/compiled/main.css" | relURL }}">
     <script src="https://kit.fontawesome.com/7699dbdde6.js" crossorigin="anonymous"></script>
 </head>
