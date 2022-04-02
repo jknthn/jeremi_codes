@@ -30,5 +30,11 @@
       "profile_suffix": "jeremi.kaczmarczyk@gmail.com",
       "icon": "fa-solid fa-at"
     }
+  ],
+  "share_destinations": [
+    {
+      "name": "Reddit",
+      "url": "https://reddit.com/submit?url={url}&title={title}"
+    }
   ]
 }

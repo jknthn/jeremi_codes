@@ -6,5 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./themes/jc/static/css/main.css -o ./themes/jc/static/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./themes/jc/static/css/main.css -o ./themes/jc/static/css/compiled/main.css --jit"
+  },
+  "dependencies": {
+    "tailwind-nord": "^1.2.0"
   }
 }
