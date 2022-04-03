@@ -34,23 +34,51 @@
   "share_destinations": [
     {
       "name": "Reddit",
-      "url": "https://reddit.com/submit?url={url}&title={title}"
+      "url": "https://reddit.com/submit?",
+      "suffix": "",
+      "icon": "fa-brands fa-reddit",
+      "parameters": {
+        "url": "url",
+        "title": "title"
+      }
     },
     {
       "name": "Twitter",
-      "url": "https://twitter.com/intent/tweet?url={url}&via={via}"
+      "url": "https://twitter.com/intent/tweet?",
+      "suffix": "",
+      "icon": "fa-brands fa-twitter",
+      "parameters": {
+        "url": "url",
+        "via": "via"
+      }
     },
     {
       "name": "LinkedIn",
-      "url": "https://www.linkedin.com/shareArticle?mini=true&url={url}&title={title}&summary={summary}"
+      "url": "https://www.linkedin.com/sharing/share-offsite/?",
+      "suffix": "",
+      "icon": "fa-brands fa-linkedin",
+      "parameters": {
+        "url": "url"
+      }
     },
     {
       "name": "Facebook",
-      "url": "https://www.facebook.com/sharer.php?href={url}&display=popup"
+      "url": "https://www.facebook.com/sharer.php?",
+      "suffix": "&display=popup",
+      "icon": "fa-brands fa-facebook",
+      "parameters": {
+        "href": "url"
+      }
     },
     {
       "name": "Hacker News",
-      "url": "https://news.ycombinator.com/submitlink?u={url}&t={title}"
+      "url": "https://news.ycombinator.com/submitlink?",
+      "suffix": "",
+      "icon": "fa-brands fa-hacker-news",
+      "parameters": {
+        "u": "url",
+        "t": "title"
+      }
     }
   ]
 }
