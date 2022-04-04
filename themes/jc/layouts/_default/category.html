@@ -1,0 +1,9 @@
+{{ define "article" }}
+<h3>Category:</h3>
+<h2>{{ .Title }}</h2>
+{{ $paginator := .Paginate .Pages}}
+{{ range $paginator.Pages }}
+{{ partial "post_summary.html" . }}
+{{ end }}
+{{ partial "page_control.html" . }}
+{{ end }}

@@ -7,10 +7,16 @@
         <header>
             <h2>{{ .Title }}</h2>
             <div class="text-right">
-                <p class="text-xs font-mono">By <b>{{ .Params.Author }}</b></p>
-                <p class="text-xs font-mono">Posted <b>{{ .Date.Format "January 2, 2006" }}</b></p>
-                <p class="text-xs font-mono">Reading time <b>{{ math.Round (div (countwords .Content) 200.0) }} minutes</b></p>
+                <p class="text-xs font-mono">by <b>{{ .Params.Author }}</b></p>
+                <p class="text-xs font-mono">posted <b>{{ .Date.Format "January 2, 2006" }}</b></p>
+                <p class="text-xs font-mono">reading time <b>{{ math.Round (div (countwords .Content) 200.0) }} minutes</b></p>
+                <p class="text-xs font-mono">
+                    {{ range .Params.tags }}
+                    <a class="text-s font-mono hover:text-nord10" href="/tags/{{ . | urlize }}"><b>#{{ . }}</b></a>
+                    {{ end }}
+                </p>
             </div>
+
         </header>
         <section class="body">
             {{ .Content }}
@@ -20,4 +26,12 @@
 
 {{ define "page-foot" }}
     {{ partial "social_share.html" . }}
+    {{ if .Params.disableComments }}
+
+    {{ else }}
+<br>
+<section class="comments pt-8 px-8">
+    {{ template "_internal/disqus.html" . }}
+</section>
+    {{ end }}
 {{ end }}

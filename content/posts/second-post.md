@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Second post"
+date: 2022-04-04T08:32:17+02:00
 draft: false 
 author: "Jeremi Kaczmarczyk"
 categories:
@@ -10,7 +10,7 @@ tags:
 - python
 - solid
 - tutorial
-disableComments: false
+disableComments: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis orci dolor. Donec porttitor sem erat, nec pharetra

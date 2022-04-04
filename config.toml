@@ -2,6 +2,8 @@ baseURL = 'https://jeremi.codes'
 languageCode = 'en-us'
 title = 'jeremi.codes'
 theme = 'jc'
+Paginate = 10
+disqusShortname = "jeremi-codes"
 
 [params]
 author = "Jeremi Kaczmarczyk"

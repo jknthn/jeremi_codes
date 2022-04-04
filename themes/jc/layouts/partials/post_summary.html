@@ -1,0 +1,18 @@
+<article>
+  <header>
+    <h3><a class="hover:text-nord10" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <div class="text-right">
+      <time><h6>
+        {{ .Date | dateFormat "January" }}
+        {{ .Date | dateFormat "2" }}
+      </h6></time>
+      {{ range .Params.tags }}
+      <a class="text-s font-mono hover:text-nord10" href="/tags/{{ . | urlize }}"><b>#{{ . }}</b></a>
+      {{ end }}
+    </div>
+  </header>
+  {{ .Summary }}
+  <div class="text-right">
+    <a class="text-right hover:text-nord10" href="{{ .RelPermalink }}">Read more...</a>
+  </div>
+</article>
