@@ -6,9 +6,11 @@
     <article class="post">
         <header>
             <h2>{{ .Title }}</h2>
-            <p>By {{ .Params.Author }}</p>
-            <p>Posted {{ .Date.Format "January 2, 2006" }}</p>
-            <p>Reading time: {{ math.Round (div (countwords .Content) 200.0) }} minutes.</p>
+            <div class="text-right">
+                <p class="text-xs font-mono">By <b>{{ .Params.Author }}</b></p>
+                <p class="text-xs font-mono">Posted <b>{{ .Date.Format "January 2, 2006" }}</b></p>
+                <p class="text-xs font-mono">Reading time <b>{{ math.Round (div (countwords .Content) 200.0) }} minutes</b></p>
+            </div>
         </header>
         <section class="body">
             {{ .Content }}

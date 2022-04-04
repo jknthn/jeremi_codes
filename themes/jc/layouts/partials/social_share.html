@@ -5,31 +5,32 @@
     </div>
     <h5 class="text-xl font-mono">Share it:</h5>
     <hr>
+    <div class="gap-4">
+        {{ $this_url := (string .Permalink) | safeURL  }}
+        {{ $title :=  (string .Title) }}
+        {{ $summary :=  .Summary }}
+        {{ $via := "jeremi_codes" }}
 
-    {{ $this_url := (string .Permalink) | safeURL  }}
-    {{ $title :=  (string .Title) }}
-    {{ $summary :=  .Summary }}
-    {{ $via := "jeremi_codes" }}
-
-    {{ range .Site.Data.socialmedia.share_destinations }}
-    {{ $share_url := .url  }}
-    {{ $parameters_map := .parameters }}
-    {{ range $key, $value := $parameters_map }}
-    {{ if eq $value "url" }}
-    {{ $share_url = printf "%s&%s=%s" $share_url $key $this_url }}
-    {{ else if eq $value "title" }}
-    {{ $share_url = printf "%s&%s=%s" $share_url $key $title }}
-    {{ else if eq $value "summary" }}
-    {{ $share_url = printf "%s&%s=%s" $share_url $key $summary }}
-    {{ else if eq $value "via" }}
-    {{ $share_url = printf "%s&%s=%s" $share_url $key $via }}
-    {{ end }}
-    {{ end }}
-    {{ if ne .suffix "" }}
-    {{ $share_url = printf "%s%s" $share_url .suffix}}
-    {{ end }}
-    <button class="content-center w-10 h-10 text-nord1 hover:text-nord10">
-        <a href="{{ $share_url | safeURL }}" target="_blank" rel="noopener noreferrer"><i class="{{.icon}} fa-xl"></i></a>
-    </button>
-    {{ end }}
+        {{ range .Site.Data.socialmedia.share_destinations }}
+        {{ $share_url := .url  }}
+        {{ $parameters_map := .parameters }}
+        {{ range $key, $value := $parameters_map }}
+        {{ if eq $value "url" }}
+        {{ $share_url = printf "%s&%s=%s" $share_url $key $this_url }}
+        {{ else if eq $value "title" }}
+        {{ $share_url = printf "%s&%s=%s" $share_url $key $title }}
+        {{ else if eq $value "summary" }}
+        {{ $share_url = printf "%s&%s=%s" $share_url $key $summary }}
+        {{ else if eq $value "via" }}
+        {{ $share_url = printf "%s&%s=%s" $share_url $key $via }}
+        {{ end }}
+        {{ end }}
+        {{ if ne .suffix "" }}
+        {{ $share_url = printf "%s%s" $share_url .suffix}}
+        {{ end }}
+        <button class="content-center w-10 h-10 text-nord1 hover:text-nord10">
+            <a href="{{ $share_url | safeURL }}" target="_blank" rel="noopener noreferrer"><i class="{{.icon}} fa-xl"></i></a>
+        </button>
+        {{ end }}
+    </div>
 </div>

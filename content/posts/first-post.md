@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "First post"
+date: 2022-04-03T08:32:17+02:00
 draft: false 
 author: "Jeremi Kaczmarczyk"
 categories:
