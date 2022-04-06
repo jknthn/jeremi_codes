@@ -11,6 +11,8 @@ tags:
 - solid
 - tutorial
 disableComments: false
+keywords:
+- python
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis orci dolor. Donec porttitor sem erat, nec pharetra

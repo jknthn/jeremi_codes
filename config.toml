@@ -14,3 +14,16 @@ title = 'jeremi.codes'
 [markup.highlight]
 style = 'nord'
 tabWidth = 4
+
+[related]
+threshold = 80.0
+includeNewer = false
+toLower = false
+
+[[related.indices]]
+name = "keywords"
+weight = 100.0
+
+[[related.indices]]
+name = "date"
+weight = 10.0

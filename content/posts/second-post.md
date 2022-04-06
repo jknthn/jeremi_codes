@@ -10,7 +10,9 @@ tags:
 - python
 - solid
 - tutorial
-disableComments: true
+disableComments: true 
+keywords:
+- python
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis orci dolor. Donec porttitor sem erat, nec pharetra
