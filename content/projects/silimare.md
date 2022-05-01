@@ -1,6 +1,6 @@
 ---
 title: "Silimare"
-draft: false
+draft: true
 image: //via.placeholder.com/640x150
 alt_text: "Silimare screenshot"
 start_date: "2020-02-01"

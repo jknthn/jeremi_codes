@@ -1,6 +1,6 @@
 ---
 title: "Rl_rnd"
-draft: false
+draft: true
 image: //via.placeholder.com/640x150
 alt_text: "Rl_rnd screenshot"
 start_date: "2020-02-01"

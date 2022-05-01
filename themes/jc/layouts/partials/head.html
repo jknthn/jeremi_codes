@@ -30,6 +30,7 @@
     <meta property="og:image" content="{{ .Site.BaseURL }}static/img/social_cover.png"/>
     <meta property="og:image:alt" content="Social cover banner"/>
 
-    <link rel="stylesheet" href="{{ "css/compiled/main.css" | relURL }}">
+    {{ $css := resources.Get "/static/css/compiled/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <script src="https://kit.fontawesome.com/7699dbdde6.js" crossorigin="anonymous"></script>
 </head>
