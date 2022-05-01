@@ -1,6 +1,7 @@
-generate:
+deploy:
 	npm run build
 	hugo --cleanDestinationDir --minify
+	hugo deploy
 
 watch:
 	make -j 2 watch-tailwind watch-hugo
