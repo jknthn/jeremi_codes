@@ -1,7 +1,7 @@
 ---
 title: "Second post"
 date: 2022-04-04T08:32:17+02:00
-draft: false 
+draft: true 
 author: "Jeremi Kaczmarczyk"
 categories:
 - Python

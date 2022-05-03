@@ -33,4 +33,6 @@
     {{ $css := resources.Get "/static/css/compiled/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <script src="https://kit.fontawesome.com/7699dbdde6.js" crossorigin="anonymous"></script>
+
+    <script defer data-domain="jeremi.codes" src="https://plausible.io/js/plausible.js"></script>
 </head>
