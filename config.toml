@@ -27,13 +27,3 @@ weight = 100.0
 [[related.indices]]
 name = "date"
 weight = 10.0
-
-[deployment]
-
-[[deployment.targets]]
-name = "prod"
-URL = "s3://jeremi.codes-root?region=eu-west-2"
-
-[[deployment.matchers]]
-pattern = "^.+\\.(html|xml|js|css)$"
-gzip = true
