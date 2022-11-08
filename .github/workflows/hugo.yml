@@ -43,6 +43,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+      - name: npm install
+        run: npm install
+      - name: Compile tailwind css
+        run: npm run build
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
