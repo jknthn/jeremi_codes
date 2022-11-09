@@ -31,7 +31,9 @@
     <meta property="og:image:alt" content="Social cover banner"/>
 
     {{ $css := resources.Get "/static/css/compiled/main.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{ $cssLink := $css.RelPermalink}}
+    {{ $cssLinkFixed := replace $cssLink "jeremi_codes/" "" }}
+    <link rel="stylesheet" href="{{ $cssLinkFixed }}">
     <script src="https://kit.fontawesome.com/7699dbdde6.js" crossorigin="anonymous"></script>
 
     <script defer data-domain="jeremi.codes" src="https://plausible.io/js/plausible.js"></script>
